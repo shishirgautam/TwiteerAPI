@@ -1,0 +1,25 @@
+{
+  "name": "twiteerapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "twiteer.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemod": "^2.2.5",
+    "package-json": "^6.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shishirgautam/TwiteerAPI.git"
+  },
+  "author": "shishir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shishirgautam/TwiteerAPI/issues"
+  },
+  "homepage": "https://github.com/shishirgautam/TwiteerAPI#readme"
+}
