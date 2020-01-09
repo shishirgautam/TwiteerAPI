@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const userRouter = require('./routes/users');
 const dotenv = require('dotenv').config();
 const uploadRouter = require('./routes/upload');
-const postsRouter = require('./routes/posts');
+const postsRouter = require('./routes/post');
 const auth = require('./authenticate');
 const cors = require('cors');
 
