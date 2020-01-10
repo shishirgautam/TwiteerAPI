@@ -7,13 +7,8 @@ const userSchema = new mongoose.Schema({
         unique: true,
         minlength: 6
     },
-    phone: {
-        type: String,
-    },
-    bio: {
-        type: String,
-        required: true
-    },
+  
+  
     password: {
         type: String,
         required: true
@@ -21,10 +16,11 @@ const userSchema = new mongoose.Schema({
     image: {
         type: String
     },
-    admin: {
-        type: Boolean,
-        default: false
+    email:{
+        type:String,
+        required:true
     }
+    
 });
 
 module.exports = mongoose.model('User', userSchema);

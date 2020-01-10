@@ -17,6 +17,7 @@ router.post('/signup', (req, res, next) => {
             username: req.body.username,
             phone: req.body.phone,
             bio: req.body.bio,
+            email: req.body.email,
             password: hash,
             image: req.body.image   
         }).then((user) => {
@@ -50,6 +51,20 @@ router.post('/login', (req, res, next) => {
 
 router.get('/me', auth.verifyUser, (req, res, next) => {
     res.json({ _id: req.user._id, username: req.user.username, password: req.user.password, bio: req.user.bio, phone: req.user.phone, image: req.user.image });
+});
+
+router.post('/check', (req, res, next) => {
+    User.findOne({ email: req.body.email })
+        .then((user) => {
+            if (user == null) {
+                res.json({ status: "good to go" });
+
+            } else {
+                res.json({ status: "not good to go" });
+            }
+        }
+
+        )
 });
 
 
